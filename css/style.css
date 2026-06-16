@@ -5,6 +5,12 @@
     font-family:Arial, sans-serif;
 }
 
+.logo img{
+    height:70px;
+    width:auto;
+    display:block;
+}
+
 body{
     line-height:1.6;
 }
@@ -173,4 +179,57 @@ body{
 .prev:hover,
 .next:hover{
     background:rgba(255,255,255,0.4);
+}
+
+/* ===== HEADER ===== */
+
+#header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    transition:0.4s;
+}
+
+#header.scrolled{
+    background:#0d3b66;
+    box-shadow:0 3px 15px rgba(0,0,0,0.2);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo h2{
+    color:white;
+    font-size:28px;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.invest-btn{
+    background:#f4a261;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.invest-btn:hover{
+    transform:translateY(-2px);
 }
