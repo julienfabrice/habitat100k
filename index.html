@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABITAT 100K - AKOK SARL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>AKOK SARL</h2>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Le Projet</a></li>
+                <li><a href="#">Logements</a></li>
+                <li><a href="#">Partenaires</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bannière principale -->
+    <section class="slider">
+
+    <div class="slide active">
+        <img src="images/slide1.jpeg" alt="BTC-A">
+        <div class="overlay"></div>
+
+        <div class="slide-content">
+            <h1>HABITAT 100K</h1>
+            <p>
+                100 000 logements sociaux pour répondre durablement à la crise du logement au Cameroun.
+            </p>
+            <a href="#" class="btn">Découvrir le projet</a>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/slide2.jpeg" alt="Construction">
+        <div class="overlay"></div>
+
+        <div class="slide-content">
+            <h1>Technologie BTC-A</h1>
+            <p>
+                Des constructions écologiques, solides et adaptées aux réalités locales.
+            </p>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/image1.jpg" alt="Projet Habitat">
+        <div class="overlay"></div>
+
+        <div class="slide-content">
+            <h1>Vision Nationale</h1>
+            <p>
+                Un projet structurant porté par AKOK SARL pour bâtir le Cameroun de demain.
+            </p>
+            <a href="#" class="btn">Nos ambitions</a>
+        </div>
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+</section>
+
+    <!-- Présentation -->
+    <section class="about">
+        <div class="container">
+            <h2>À propos du projet</h2>
+
+            <p>
+                HABITAT 100K est une initiative d'envergure nationale portée par
+                AKOK SARL visant la construction de 100 000 logements sociaux
+                de type T3 en Briques de Terre Compressées Améliorées (BTC-A).
+            </p>
+
+            <p>
+                Le projet contribuera à réduire le déficit de plus de
+                2 millions de logements au Cameroun tout en créant
+                des milliers d'emplois directs et indirects.
+            </p>
+        </div>
+    </section>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slides = document.querySelectorAll(".slide");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
+
+    let current = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+    }
+
+    function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }
+
+    function prevSlide() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+    }
+
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
+    // Défilement automatique toutes les 5 secondes
+    setInterval(nextSlide, 5000);
+
+});
+</script>
+
+</body>
+</html>
